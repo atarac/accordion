@@ -9,7 +9,6 @@ export default function Edit( { attributes, setAttributes } ) {
 	const blockProps = useBlockProps();
 	const onChangeContent = ( newContent ) => {
 		setAttributes( { content:newContent } )
-		console.log("content attribute updated:", newContent);
 	};
 	const [ showInner, setShowInner ] = useState( false );
 	const toggleInner = () => {
@@ -23,8 +22,8 @@ export default function Edit( { attributes, setAttributes } ) {
 			setAcordionClass('accordion-inner-exit-done');
 		};
 	};
-	const onChangeInnerContent = ( newContent ) => {
-		setAttributes( { innerContent:newContent } );
+	const onChangeInnerContent = ( newInnerContent ) => {
+		setAttributes( { innerContent:newInnerContent } );
 	};
 
 	return (
@@ -32,7 +31,7 @@ export default function Edit( { attributes, setAttributes } ) {
 			<div onClick={ toggleInner }>
 				<RichText
 					{ ...blockProps }
-					tagName='p'
+					tagName='h3'
 					onChange={ onChangeContent }
 					allowedFormats={ [ 'core/bold', 'core/italic' ] }
 					value={ attributes.content }

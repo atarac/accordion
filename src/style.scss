@@ -6,3 +6,42 @@
 	color: #fff;
 	padding: 2px;
 }
+
+%editSize {
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 840px;
+	overflow: hidden;
+}
+
+.accordion-inner-enter {
+	@extend %editSize;
+	max-height: 0;
+}
+
+.accordion-inner-enter-done {
+	@extend %editSize;
+	border: 1px solid colors.$accordion-color;
+	max-height: 1000px;
+	transition: all 0.5s ease-in;
+}
+
+.accordion-inner-exit {
+	@extend %editSize;
+	border: 1px solid colors.$accordion-color;
+	max-height: 1000px;
+}
+
+.accordion-inner-exit-active {
+	@extend %editSize;
+	border: 1px solid colors.$accordion-color;
+	max-height: 0;
+	transition: all 0.5s ease-out;
+}
+
+.accordion-inner-exit-done {
+	@extend %editSize;
+	max-height: 0;
+	transition: all 0.5s ease-out;
+}

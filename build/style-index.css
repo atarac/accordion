@@ -8,4 +8,38 @@
   padding: 2px;
 }
 
+.accordion-inner-exit-done, .accordion-inner-exit-active, .accordion-inner-exit, .accordion-inner-enter-done, .accordion-inner-enter {
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 840px;
+  overflow: hidden;
+}
+
+.accordion-inner-enter {
+  max-height: 0;
+}
+
+.accordion-inner-enter-done {
+  border: 1px solid #21759b;
+  max-height: 1000px;
+  transition: all 0.5s ease-in;
+}
+
+.accordion-inner-exit {
+  border: 1px solid #21759b;
+  max-height: 1000px;
+}
+
+.accordion-inner-exit-active {
+  border: 1px solid #21759b;
+  max-height: 0;
+  transition: all 0.5s ease-out;
+}
+
+.accordion-inner-exit-done {
+  max-height: 0;
+  transition: all 0.5s ease-out;
+}
+
 /*# sourceMappingURL=style-index.css.map*/

@@ -15,6 +15,11 @@
     "content": {
       "type": "string",
       "source": "html",
+      "selector": "h3"
+    },
+    "innerContent": {
+      "type": "string",
+      "source": "html",
       "selector": "p"
     }
   },

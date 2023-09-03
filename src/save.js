@@ -1,13 +1,22 @@
-import { __ } from '@wordpress/i18n';
-import { useBlockProps,RichText } from '@wordpress/block-editor';
+import { RichText, useBlockProps } from '@wordpress/block-editor';
 
-export default function save({ attributes }) {
+export default function save( { attributes } ) {
 	const blockProps = useBlockProps.save();
+
 	return (
-		<RichText.Content
-			{ ...blockProps }
-			tagName='p'
-			value={attributes.content}
-		/>
+		<>
+			<div { ...blockProps }>
+				<RichText.Content
+					tagName="h3"
+					value={ attributes.content }
+				/>
+			</div>
+			<div className={ attributes.accordionClass }>
+				<RichText.Content
+					tagName="p"
+					value={ attributes.innerContent }
+				/>
+			</div>
+		</>
 	);
 }
