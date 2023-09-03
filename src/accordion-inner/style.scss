@@ -1,0 +1,8 @@
+@use "colors";
+
+.wp-block-create-block-accordion-inner {
+	background-color: colors.$accordion-color;
+	border: colors.$accordion-color;
+	color: #fff;
+	padding: 2px;
+}

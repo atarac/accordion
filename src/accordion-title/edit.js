@@ -2,14 +2,13 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps,RichText } from '@wordpress/block-editor';
 import { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { Inner } from './inner';
+// import { Inner } from './inner';
 import './editor.scss';
 
 export default function Edit( { attributes, setAttributes } ) {
 	const blockProps = useBlockProps();
 	const onChangeContent = ( newContent ) => {
 		setAttributes( { content:newContent } )
-		console.log("content attribute updated:", newContent);
 	};
 	const [ showInner, setShowInner ] = useState( false );
 	const toggleInner = () => {
@@ -22,9 +21,6 @@ export default function Edit( { attributes, setAttributes } ) {
 		} else if( status === 'exited') {
 			setAcordionClass('accordion-inner-exit-done');
 		};
-	};
-	const onChangeInnerContent = ( newContent ) => {
-		setAttributes( { innerContent:newContent } );
 	};
 
 	return (
@@ -39,7 +35,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					placeholder={ __( 'Write your text...' ) }
 				/>
 			</div>
-			<CSSTransition
+			{/* <CSSTransition
 				in={ showInner }
 				timeout={ 500 }
 				classNames="accordion-inner"
@@ -51,7 +47,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					setInnerContent={ onChangeInnerContent }
 					accordionClass={ accordionClass }
 				/>
-			</CSSTransition>
+			</CSSTransition> */}
 		</>
 	);
 };

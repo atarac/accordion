@@ -1,9 +1,9 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "create-block/accordion",
+	"name": "create-block/accordion-inner",
 	"version": "0.1.0",
-	"title": "Accordion",
+	"title": "AccordionInner",
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
@@ -15,10 +15,10 @@
 		"content":{
 			"type": "string",
 			"source": "html",
-			"selector": "p"
+			"selector": "div"
 		}
 	},
-	"textdomain": "accordion",
+	"textdomain": "accordion-inner",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

@@ -21,6 +21,7 @@
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function create_block_accordion_block_init() {
-	register_block_type( __DIR__ . '/build' );
+	register_block_type( __DIR__ . '/build/accordion-title' );
+	register_block_type( __DIR__ . '/build/accordion-inner' );
 }
 add_action( 'init', 'create_block_accordion_block_init' );
